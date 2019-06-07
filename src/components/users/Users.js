@@ -200,7 +200,7 @@ export class Users extends Component {
 const userStyle = {
   display: "grid",
   gridTemplateColumns: "repeat(3,1fr)",
-  gridGap:'5px 5px'
+  gridGap: "5px 5px"
 };
 
 export default Users;
