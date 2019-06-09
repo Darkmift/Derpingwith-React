@@ -10,8 +10,21 @@ class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
 
-    const res = await axios.get("https://api.github.com/users");
+    const url = "https://api.github.com/users";
+    const {
+      REACT_APP_GITHUB_CLIENT_ID: clientID,
+      REACT_APP_GITHUB_CLIENT_SECRET: clientSecret
+    } = process.env;
+    const credentials = `client_id=${clientID}&client_secret=${clientSecret}`;
+
+    const amount_defined = 100;
+    const amount_defined_string = `&per_page=${amount_defined}`;
+    const res = await axios.get(
+      `${url}?${credentials}${amount_defined_string}`
+    );
+
     console.log(res.data);
+
     this.setState({ users: res.data, loading: false });
   }
 

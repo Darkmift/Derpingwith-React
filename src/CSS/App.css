@@ -115,9 +115,28 @@ img {
 
 /* Cards */
 .card {
+  position: relative;
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+}
+
+.amountDiv {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 8px;
+  padding: 2px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* List */
