@@ -4,6 +4,11 @@ import Spinner from "../layout/Spinner";
 import PropTypes from "prop-types";
 
 const Users = props => {
+  let userAmount = 0;
+  //reset if search called
+  if (userAmount > 0) {
+    userAmount = 0;
+  }
   return props.loading ? (
     <Spinner />
   ) : (
@@ -25,6 +30,5 @@ const userStyle = {
   gridTemplateColumns: "repeat(3,1fr)",
   gridGap: "5px 5px"
 };
-let userAmount = 0;
 
 export default Users;
